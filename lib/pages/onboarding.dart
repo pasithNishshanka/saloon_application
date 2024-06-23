@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:saloon_application/pages/login.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({super.key});
@@ -21,18 +22,23 @@ class _OnBoardingState extends State<Onboarding> {
             SizedBox(height: 150.0,),
 
 
-            Container( 
-              padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
-              decoration: BoxDecoration( 
-                color: Color.fromARGB(255, 251, 250, 248),
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              child: const Text("Get Your Style", 
-              style: TextStyle( 
-                color: Color.fromARGB(255, 5, 5, 5), 
-                fontSize: 24.0, 
-                fontWeight: FontWeight.bold),
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => LogIn()));
+              },
+              child: Container( 
+                padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+                decoration: BoxDecoration( 
+                  color: Color.fromARGB(255, 251, 250, 248),
+                  borderRadius: BorderRadius.circular(10.0),
                 ),
+                child: const Text("Get Your Style", 
+                style: TextStyle( 
+                  color: Color.fromARGB(255, 5, 5, 5), 
+                  fontSize: 24.0, 
+                  fontWeight: FontWeight.bold),
+                  ),
+              ),
             )
           ],
         ),
